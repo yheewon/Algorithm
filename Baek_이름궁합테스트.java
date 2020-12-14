@@ -7,17 +7,15 @@ public class test {
 
 	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		StringTokenizer st = new StringTokenizer(br.readLine());
 		int[] alphabet = {3,2,1,2,4,3,1,3,1,1,3,1,3,2,1,2,2,2,1,2,1,1,1,2,2,1};
 
-		String len = br.readLine();
-		String[] lenArr = len.split(" ");
-		int len1 = Integer.parseInt(lenArr[0]);
-		int len2 = Integer.parseInt(lenArr[1]);
+		int len1 = Integer.parseInt(st.nextToken());
+		int len2 = Integer.parseInt(st.nextToken());
 		
-		String line = br.readLine();
-		String[] strArr = line.split(" ");
-		char[] str = strArr[0].toCharArray();
-		char[] str2 = strArr[1].toCharArray();
+		st = new StringTokenizer(br.readLine());
+		char[] str = st.nextToken().toCharArray();
+		char[] str2 = st.nextToken().toCharArray();
 
 		ArrayList<Integer> answer = new ArrayList<Integer>();
 		
