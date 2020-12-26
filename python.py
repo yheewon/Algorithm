@@ -142,3 +142,16 @@ print(ran)
 students = [1,2,3,4,5]
 students = [i+100 for i in students]
 print(students)
+
+### 가변 인자 ###
+def profile(name,age,*language):
+    print("name : {0}\tage : {1}\t".format(name,age),end=" ")
+    for l in language:
+        print(l,end=" ")
+
+    print()
+
+profile("짱구",20,"java","kotlin")
+profile("흰둥이",17,"C","C++","javascript")
+
+print("hw","yun",sep=",",end="!")
