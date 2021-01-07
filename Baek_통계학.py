@@ -1,20 +1,25 @@
-from collections import Counter
 import sys
+from collections import Counter
 
-N = int(sys.stdin.readline().rstrip())
-num = list()
+n = int(sys.stdin.readline())
 
-for _ in range(N) :
-    num.append(int(sys.stdin.readline().rstrip()))
+nums = []
 
-num.sort()
-num_count = Counter(num).most_common(2)
+for i in range(n):
+    nums.append(int(sys.stdin.readline()))
+    
+nums.sort()
+nums_s = Counter(nums).most_common()
 
-print(sum(num)//len(num))
-print(num[len(num)//2])
-if len(num_count) >1 and num_count[0][1] == num_count[1][1] :
-    print(num_count[1][0])
-else :
-    print(num_count[0][0])
+print(round(sum(nums) / n))
+print(nums[n // 2])
 
-print(num[-1] - num[0])
+if len(nums_s) > 1:
+    if nums_s[0][1] == nums_s[1][1]:
+        print(nums_s[1][0])
+    else:
+        print(nums_s[0][0])
+else:
+    print(nums_s[0][0])
+    
+print(nums[-1] - nums[0])
