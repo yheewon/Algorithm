@@ -1,3 +1,4 @@
+#체육복
 def solution(n, lost, reserve):
     res_student = sorted([x for x in reserve if x not in lost])
     lost_student = sorted([x for x in lost if x not in reserve])
