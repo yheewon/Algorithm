@@ -13,5 +13,6 @@ def solution(s):
     return answer
 
 
+# 참고코드
 # def solution(s):
 #     return ''.join(sorted(s, reverse=True))
